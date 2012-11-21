@@ -1,11 +1,11 @@
 Summary:	QEMU KVM
 Name:		qemu-kvm
 Version:	1.2.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Emulators
-Source0:	http://wiki.qemu.org/download/qemu-%{version}.tar.bz2
-# Source0-md5:	78eb1e984f4532aa9f2bdd3c127b5b61
+Source0:	http://downloads.sourceforge.net/kvm/%{name}-%{version}.tar.gz
+# Source0-md5:	d7b18b673c48abfee65a9c0245df0415
 Source1:	http://www.linuxtogo.org/~kevin/SeaBIOS/bios.bin-1.7.0
 Source10:	80-kvm.rules
 Source11:	kvm-modules-load.conf
@@ -46,7 +46,7 @@ Group:		Daemons
 QEMU guest agent.
 
 %prep
-%setup -qn qemu-%{version}
+%setup -q
 
 cp -a %{SOURCE1} pc-bios/bios.bin
 
